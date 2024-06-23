@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-RoomchatApplication<roomchat>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.media.roomchat.RoomchatApplication",
+            "projectName": "roomchat",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoomChat</title>
+    <script src="js/localSocketio.js"></script>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/output.css">
+</head>
+<body>
+    <div id="login_page" class="absolute h-screen w-screen">
+    <div class="flex flex-col gap-3 justify-center items-center h-screen w-screen bg-blue-700 absolute z-10">
+        <input type="text" id="name" placeholder="your name" autofocus class="p-3 rounded-xl text-xl border-2 text-center border-black">
+        <input type="text" id="room" placeholder="room name" class="p-3 rounded-xl text-xl border-2 text-center border-black">
+        <input type="button" id="join" value="join room" class="p-3 bg-black text-white rounded-xl text-xl font-light">
+    </div>
+    </div>
+
+    <div class=" absolute h-screen w-screen">
+    <div class="h-screen w-screen flex justify-center items-end gap-2 bg-slate-900">
+        <div id="screen" class="absolute top-10 w-11/12 h-3/4 bg-black rounded-xl p-6 text-white overflow-auto">
+    
+            <div class="text-center" id="room_name"></div><div class="h-px bg-white my-2"></div>
+        
+            <!-- 
+            <b class="inline-block mt-2">name: &nbsp;</b><p class="inline-block">my message</p>
+            <div class="text-slate-500">12:45PM</div> 
+            -->
+        
+        </div>
+        <input type="text" placeholder="your message" id="msgBox" autofocus aria-required="true" class="p-3 rounded-xl text-xl w-4/6 mb-8 text-black">
+        <input type="button" value="send" id="send" class="p-3.5 rounded-xl text-xl bg-black text-white mb-8 font-light">
+        <input type="button" value="leave" id="leave" class="p-3.5 rounded-xl text-xl bg-black text-white mb-8  ml-10 font-light">
+    </div>
+    </div>
+</body>
+
+</html>
