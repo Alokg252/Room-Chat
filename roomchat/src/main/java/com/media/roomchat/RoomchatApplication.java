@@ -69,16 +69,17 @@ public class RoomchatApplication {
 			public void onData(SocketIOClient client, clientMessage msg, AckRequest ackRequest ){
 				
 				// client left room
-				client.leaveRoom(msg.getMsg());
 				
 				// sending left message to room
 				BroadcastOperations ros = server.getRoomOperations(client.getAllRooms().toArray()[0].toString());
 				ros.sendEvent("leftMsg", msg.getName() + " left");
+				client.leaveRoom(msg.getMsg());
 
 				System.out.println(msg.getName() + " left room : " + msg.getMsg());
 			}
 		});		
 
+		
 		//----------------- sending message to room
 		server.addEventListener("msg", clientMessage.class, new DataListener<clientMessage>() {
 			@Override
